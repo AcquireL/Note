@@ -1,0 +1,64 @@
+	读《计算机网络实验教程》笔记
+	
+主要内容：5层协议体系结构（物理层、链路层、网络层、传输层、应用层），覆盖了网络命令及网络布线、协议分析、交换机配置、虚拟局域网配置、快速生成树配置、路由器配置、网络地址转换、无线局域网配置、应用服务器配置。
+
+第1章	常用的网络命令
+	1.常用的Windows网络命令（hostname,ping,ipconfig,shutdown,tracert,pathping,netstat,nslookup,arp,route）
+		（1）tracert：检查到达的目标IP地址的路径
+		（2）pathping：路由跟踪工具，它将ping和tracert命令的功能结合起来，并提供一些额外的信息。
+		（3）netstat：显示统计信息和当前TCP/IP网络连接
+		（4）nslookup: 查询一台机器的IP地址和对应的域名
+		（5）arp：显示和修改地址解析协议(ARP)使用的“IP到物理”地址的转换表
+		（6）route：操作网络路由表
+	2.直连线和交叉线
+		（1）直连线：两端都采用EIA/TIA 568A标准，线序：白绿、绿、白橙、蓝、白蓝、橙、白棕、棕
+		（2）交叉线：一端采用EIA/TIA 568A标准,另一端采用EIA/TIA 568B标准，线序：白橙、橙、白绿、绿、蓝、白蓝、绿、白绿、白棕、棕
+	
+第2章	链路层协议分析
+	1.数据链路层协议（Ethernet V2标准、IEEE 802.3标准）
+		（1）Ethernet V2适合传输大量的数据 （HTTP，FTP,SMTP,POP3等应用）
+		（2）IEEE 802.3适合传输需要严格传输控制的数据（交换机之间的BPDU(桥协议数据单元）数据包，VLAN Trunk协议采用的是 IEEE 802.3 SNAP的帧）
+
+第3章	链路层交换机基本配置与管理
+	1.交换机管理方式
+		（1）带外管理：通过Console端口管理，使用配置线缆，近距离配置，第一次配置必须利用Console端口进行配置
+		（2）带内管理：使用Telnet远程管理
+第4章	链路层交换机虚拟局域网配置
+	1.虚拟局域网：（Virtual Local Area Network，VLAN）是一组逻辑上的设备和用户。
+	2.交换机的工作模式：Trunk模式，Access模式
+第5章	链路层交换机快速生成树配置
+	1.生成树协议（spanning-tree），作用是在交换网络中提供冗余备份链路，并且解决交换网络中的环路问题
+第6章	网络层协议
+	1.ARP协议工作过程
+		（1）ARP在同一网段内的解析过程
+		（2）ARP在不同网段内的解析过程
+第7章	网络层路由器基本配置与管理
+	1.单臂路由：为实现VLAN间通信的三层网络设备路由器，只需一个以太网，通过创建子接口可以承担所有VLAN的网关，而在不同的VLAN间转发数据
+第8章	网络层静态路由配置
+	1.静态路由：由管理员人工配置，指定路由路径
+第9章	网络层动态路由配置
+	1.RIP 协议：（Routing Information Protocol，路由信息协议）是一种内部网关协议（Interior Gateway Protocol，IGP），是基于V-D算法的动态路由选择协议。
+	2.OSPF协议：（Open Shortest Path First，开放式最短路径优先）是一种内部网关协议，用于在单一自治系统（Autonomous System，AS）内决策路由，OSPF是基于Dijkstra的最短路径算法（SPF）的动态路由选择协议，具有无自环、收敛快的特点。
+第10章	网络地址转换NAT/NAPT配置
+	1.网络转换：（Network Address Translation，NAT）
+		（1）静态NAT：实现内部地址与外部呆滞一对一映射，现实中，一般都用于服务器
+		（2）动态NAT：定义一个地址池，自动映射
+	2.网络端口地址转换（NAPT）：使用不同的端口来映射多个内网IP地址到一个指定的外网IP地址，多对一
+第11章	无线局域网组件与配置
+	1.无线局域网：（Wireless Local Area NetWork，WLAN）由无线网卡、接入控制器设备（Access Controller AC）、无线接入点（Access Point）、计算机等组成
+第12章	传输层协议分析
+	1.用户数据协议（User Datagram Protocl，UDP）,特点：无连接、不可靠、面向报文
+	2.传输控制协议（Transmission Control Protocol，TCP）,特点：面向连接，提供可靠服务，基于字节流，不支持多播和广播
+第13章	应用层协议与服务器配置
+	1.相关知识点
+		（1）动态主机配置协议：（Dynamic Host Configuration Protocol,DHCP）集中的管理，分配IP地址，使网络环境中的主机动态地获得IP地址、Gateway地址、DNS服务器地址信息
+		（2）域名：（domain name）是Internet上某一台计算机或计算机组的名称
+		（3）域名服务器：（Domain Name Server，DNS）是进行域名和IP之间转换的服务器
+		（4）文件传出协议：（File Transfer Protocol ，FTP）用于Internet上控制文件的双向传输
+	
+	
+	
+	
+		
+		
+	
